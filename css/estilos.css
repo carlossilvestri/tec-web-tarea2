@@ -1,0 +1,267 @@
+/*Box sizing: Cuando apliques margin y padding no afecte al width.*/
+
+
+/*Snippet de Paul*/
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/*Limpiadro de Floats (clearfix) Se lo debes poner en el contenedor que contiene a los elementos*/
+
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
+    /*display: table también puedes poner*/
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    font-size: 14px;
+    line-height: 2;
+}
+
+li {
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}
+
+.boton {
+    background-color: #00bbe4;
+    padding: 10px 30px;
+    display: inline-block;
+    margin-top: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    /*Nuevo Transiciones*/
+    transition: background-color .3s ease-in-out;
+}
+
+.boton:hover {
+    background-color: #058aa8;
+}
+
+.site-header {
+    padding: 20px 0 20px 0;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    /*En vez de clearfix puedes usar también: overflow: auto;*/
+}
+
+
+/** Navegacion **/
+
+.barra {
+    background-color: #db008d;
+    margin-top: 40px;
+}
+
+.navegacion-principal a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 22px;
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal a {
+        display: inline-block;
+    }
+}
+
+.navegacion-principal a:hover {
+    background-color: #00e8e4;
+}
+
+
+/** Contenedores Principales **/
+
+.contenido-principal {
+    margin-top: 40px;
+}
+
+.contenido-principal,
+.sidebar {
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .contenido-principal {
+        width: 70%;
+        float: left;
+        padding: 0 60px 0 0;
+    }
+    .sidebar {
+        width: 30%;
+        float: right;
+        padding: 0;
+        margin-top: 40px;
+    }
+}
+
+
+/** Entradas de Blog */
+
+h2 {
+    color: #00bbe4;
+    margin-bottom: 20px;
+}
+
+.entrada {
+    margin-bottom: 60px;
+}
+
+.entrada:last-of-type {
+    margin-bottom: 0;
+}
+
+.entrada img {
+    display: block;
+}
+
+@media (min-width: 480px) {
+    .entrada img {
+        width: 300px;
+        float: left;
+        margin: 0 30px 0 0;
+    }
+}
+
+.mostrarBlog {
+    display: none;
+}
+
+
+/** Sidebar**/
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 10px 10px 0;
+}
+
+.sidebar ul li:hover {
+    background-color: #00bbe4;
+}
+
+.sidebar ul li a {
+    color: #00bbe4;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.sidebar ul li:hover a {
+    color: #ffffff;
+}
+
+
+/*Footer*/
+
+.footer-sitio {
+    background-color: #db008d;
+    padding-top: 40px;
+    margin-top: 60px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer-sitio h2 {
+    color: #ffffff;
+}
+
+.footer-sitio a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 20px;
+}
+
+.footer-sitio a:last-of-type {
+    margin-right: 0;
+}
+
+@media (min-width: 768px) {
+    .footer-sitio .nosotros {
+        float: left;
+        width: 30%;
+        text-align: left;
+    }
+    .footer-sitio .menu {
+        float: right;
+        width: 50%;
+        text-align: right;
+    }
+}
+
+.copyright {
+    background-color: #b10474;
+    margin: 50px 0 0 0;
+    padding: 20px 0;
+}
+
+
+/*Servicios*/
+
+div.servicios {
+    margin-top: 30px;
+}
+
+div.servicios nav {
+    background-color: #00e8e4;
+}
+
+div.servicios nav a {
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+div.servicios nav a:hover {
+    background-color: #db008d;
+}
+
+div.servicios nav a.activo {
+    background-color: #db008d;
+}
+
+div.nuestros-servicios {
+    position: reltaive;
+    height: 200px;
+}
+
+div.nuestros-servicios>div {
+    position: absolute;
+    background-color: #db008d;
+    padding: 20px;
+    display: none;
+}
